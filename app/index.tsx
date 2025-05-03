@@ -4,6 +4,11 @@ import { View, StyleSheet, Button } from "react-native";
 
 export default function Index() {
   const router =useRouter();
+
+  fetch("https://dummyjson.com/quotes#")
+  .then((response) => response.json())
+  .then((json) => console.log(json))
+  
     return (
         <View style={styles.container}>
             <View style={styles.box}>
